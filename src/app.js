@@ -1,17 +1,46 @@
 
-// console.log(process.argv)
+// module.exports={Movie, movieArr}
 
-const movieArr =[];
+// const yargs = require("yargs");
 
-class Movie{
-    constructor(title, actor = "Not specified"){
-        this.title = title;
-        this.actor = actor
+// const { Movie, movieArr } = require("./utils");
+
+// const app = (args) => {
+//     if(args.add) {
+//         const movie = new Movie(args.movie, args.actor);
+//         movie.add()
+//         console.log(movieArr);
+//     } else if(args.addMany){
+//         console.log("add more command");
+//     } else {
+//         console.log("Incorrect command");
+//     }
+// };
+
+// app(yargs.argv);
+
+
+
+/////////////////////////////////////
+
+module.exports = { Tennis, tennisArr}
+
+const yargs = require("yargs");
+
+const { Tennis, tennisArr } = require("./utils")
+
+const app = (args) => {
+    if(args.add) {
+        const game = new Tennis(args.game, args.player);
+        game.add()
+        console.log(tennisArr);
+    } else if(args.addMore){
+        console.log("Add more players");
+    } else {
+        console.log("Wrong command");
     }
+};
 
-    add(){
-        movieArr.push(this)
-    }
-}
+app(yargs.argv);
 
-module.exports={Movie, movieArr}
+
