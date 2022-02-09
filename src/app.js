@@ -34,7 +34,7 @@ const app = (args) => {
         const game = new Tennis(args.game, args.player);
         game.add()
         console.log(tennisArr);
-    } else if(args.addMore){
+    } else if(args.addMany){
         console.log("Add more players");
     } else {
         console.log("Wrong command");
